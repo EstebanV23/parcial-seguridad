@@ -1,0 +1,33 @@
+Edificio B
+
+
+enable 
+configure terminal
+vlan 70
+name Administracion 
+interface range f0/1-24
+switchport access vlan 70 
+exit 
+interface range g0/1-2
+switchport access vlan 70
+exit
+vlan 10 
+name Estudiantes 
+interface range fa0/1-4 
+switchport access vlan 10
+exit 
+vlan 30 
+name Docentes 
+interface range f0/5-8
+switchport access vlan 30
+exit 
+vlan 40 
+name Inalambricos 
+interface range f0/9
+switchport access vlan 30
+exit 
+vlan 60 
+name Gestion
+interface range f0/10-13
+switchport access vlan 60
+exit 
